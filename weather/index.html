@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#" style="color: #fbf7f7;">Weather Forecast</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" >
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Save</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+              </li>
+
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Saved Locations
+                </a> -->
+                <!-- <ul class="dropdown-menu" id="dropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li> -->
+                  <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                <!-- </ul>
+              </li> -->
+              
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+    
+    <h2>Get Your Location's Weather Updates</h2>
+    <form action="" method="get" class="container" id="form">
+    <input id="city-input" class="forminput"  type="text" placeholder="Enter city name....">
+    <button class="btn btn-info">Submit</button>
+    <button id="save">Save Location</button>
+    <select id="saved-locations-dropdown">
+      <option value="">Select a saved location</option>
+  </select>
+    </form>
+    <!-- <h2>Current Weather</h2> -->
+    <section id="weather">
+
+        <div id="temp-details">
+
+        </div>
+
+        <div id="weather-details">
+          <img src="" alt="" id="icon" >
+        </div>
+    
+    </section>
+    <section id="other-details">
+      <div class="humidity">
+        <p>Humidity</p>
+        <img src="" alt="" id="humid">
+        <p id="h"></p>
+      </div>
+      <div class="wind-speed">
+        <p>Wind Speed</p>
+        <img src="" alt="" id="wind">
+        <p id="w"></p>
+      </div>
+      <div class="sunrise">
+        <p>Sunrise and Sunset</p>
+        <img src="" alt="" id="sun">
+        <p id="s">
+        </p>
+      </div>
+    </section>
+    <h2 style="padding: 0;">OR</h2>
+
+    <section class="compare">
+      <h2>Compare Locations</h2>
+      <form action="" method="get" id="compareForm">
+        <label for="city1">Enter first city</label>
+      <input  id="city1" class="forminput" type="text" placeholder="Enter city name....">
+      <label for="city2">Enter second city</label>
+      <input id="city2" class="forminput" type="text" placeholder="Enter city name....">
+      <button class="btn btn-info">Submit</button>
+      </form>
+      <section id="table-container">
+      <table id="compareTable">
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="weather-table-body">
+            <tr>
+                <td>Temperature</td>
+                <td id="temp-city1"></td>
+                <td id="temp-city2"></td>
+            </tr>
+            <tr>
+                <td>Weather</td>
+                <td id="weather-city1"></td>
+                <td id="weather-city2"></td>
+            </tr>
+            <tr>
+                <td>Clouds</td>
+                <td id="clouds-city1"></td>
+                <td id="clouds-city2"></td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td id="humidity-city1"></td>
+                <td id="humidity-city2"></td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+    </section>
+    <section id="about" class="about-section">
+      <div class="container">
+          <h2>About </h2>
+          <p>Welcome to the Weather App! This provide accurate and up-to-date weather information to help you plan your day better. This app leverages the OpenWeatherMap API to deliver real-time weather data, including temperature, humidity, wind speed, and more.</p>
+          <p>You can get the weather details of a particular location and compare the weather conditions of two different locations as well.</p>
+          <p>Thank you for using this service. I hope you find it useful and user-friendly. If you have any feedback or suggestions, feel free to contact</p>
+      </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>If you have any questions or would like to get in touch, please email at:</p>
+        <p class="email"><a href="mailto:priyanshinegi1968@gmail.com">priyanshinegi1968@gmail.com</a></p>
+    </div>
+</section>
+
+    <!-- <div style="margin-top: 500px;"></div> -->
+    <script type="module" src="main.js"></script>
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
