@@ -184,7 +184,7 @@ table tr:nth-child(even) {
         padding: 1em;
     }
 
-    #weather, #other-details {
+    #weather.show, #other-details {
         flex-direction: column;
         gap: 2em;
     }
@@ -199,6 +199,12 @@ table tr:nth-child(even) {
     }
     form {
         flex-wrap: wrap;
+    }
+    #other-details.show {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     
 }
